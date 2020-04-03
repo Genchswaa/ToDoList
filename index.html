@@ -1,38 +1,28 @@
-<!--BRON HTML EN CSS https://codepen.io/franklynroth/pen/ZYeaBd-->
+<!--BRON/SOURCE HTML EN CSS https://www.w3schools.com/howto/howto_js_todolist.asp -->
 
 <!doctype html>
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
 
   <title></title>
-  <h1>Project To Do List</h1>
+  <h1>Project To Do List / W3D5-Project Gian Alberto</h1>
   <link rel="stylesheet" type="text/css" href="toDoList.css">
 </head>
 
+<ul id="TDLtest"></ul>
+
+<div id="taskListTotal" class="header">
+  <h2>To Do List Gian</h2>
+  <input type="text" id="tekstInput" placeholder="Wat wil je doen vandaag?">
+  <span id="addBtn"class="addBtn">Voeg taak toe</span>
+</div>
+
+<ul id="tasklist">
+  <li><img id="trashcan" src="trash-delete-icon.jpg" width="25"></li>
+</ul>
+
 <body>
-    <div class="container">
-      <p>
-        <label for="new-task">Voeg taak toe</label><input id="new-task" type="text"><button>Taak erbij</button>
-      </p>
-      
-      <h3>Nog te doen vandaag:</h3>
-      <ul id="incomplete-tasks">
-        <li><input type="checkbox"><label>Pay Bills</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-        <li class="editMode"><input type="checkbox"><label>Go Shopping</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-        
-      </ul>
-      
-      <h3>Afgerond</h3>
-      <ul id="completed-tasks">
-        <li><input type="checkbox" checked><label>See the Doctor</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-      </ul>
-    </div>
-<body>
-<script defer src="toDoListUrlData.js"></script>
 <script src="toDoList.js"></script>
-<script src="api-client.js"></script>
+<script defer src="api-client.js"></script>
 
 </body>
 </html>

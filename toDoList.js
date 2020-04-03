@@ -1,26 +1,23 @@
-getDataFromEndPoint();
 
-async function waitForData() {
-    
-    const retrieveData = await getDataFromEndPoint();
-    console.log(retrieveData)
+// Ik wil iets invullen en dat verschijnt beneden in de lijst.
+// Dit moet door het indrukken van de button.
+const addTaskNode = document.getElementById("addBtn");
+addTaskNode.addEventListener('click', function(){
+    const newli = document.createElement("li");
+    const inputValue = document.getElementById("tekstInput").value;
+    entry.appendChild(document.createTextNode(inputValue));
+    list.appendChild(entry); 
 
-};
-waitForData();
+    alert("test")
+});
 
+//Ik wil de taak zien verschijnen in beeld.
 
-// initele lijst van database
-// {
-//     "tasks": {
-//         "-M3v9Osy5puSFLoWuE_1": {
-//             "description": "ik moet nog mijn sokken wassen",
-//             "done": true
-//         }
-//     }
-// }
-
-// gegenereerde taken postman
-//"name": "-M3wVIG7j1b61JKU0QaL"
-//"name": "-M3wVfk0-AUkDk_UuuCX"
-//"name": "-M3wVjiB_YfMsQ0WCxOf"
+// Ik wil taak verwijderen door op prullenbak te klikken.
+const removeBtn = document.getElementById("trashcan")
+const liTaskListInput = document.querySelectorAll("li")
+removeBtn.addEventListener('click', function(){
+    const delLine = this.parentElement;
+    delLine.style.display = "none";
+    });
 
